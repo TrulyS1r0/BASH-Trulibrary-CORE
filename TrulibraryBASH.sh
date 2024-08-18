@@ -2,14 +2,13 @@
 KEY=$3
 TOKEN=$2
 CALLEDBY=$1
-export VERSION=V1.0
-
+VERSION="V1.0"
 function start {
     echo "Trulibrary found, And starting. Please wait."
     if [[ "$(whoami)" != "root" ]];
         then echo "Please run as administrator or ROOT, Or with WSL if you didnt."; echo "TrulibraryBASH quit due to a fatal error (PERMISSIONS_NOT_MET)"
 
-        else echo "You are ROOT. Continuing."; run
+        else echo "You are classified as ROOT / Administrator."; run
     fi
 }
 
@@ -28,3 +27,15 @@ function run {
     fi
 }
 start
+function devtest1 {
+    if [[ "$VERSION" == "V1.0DT" ]];
+        then
+        if [[ "$(whoami)" == "root" ]];
+            then echo "CALLEDBY = "$CALLEDBY; echo "TOKEN = "$TOKEN; echo "KEY = "$KEY
+        
+            else echo "You dont have enough permissions (Admin, Root). Please stop trying to use the devtest to figure out our security measures, Since we will be releasing third party developing with TrulibraryBASH soon. Dont worry, Fellow developer/tinkerer. Lotsa Love, TrulyS1r0"
+      
+        fi
+    else echo "You arent a developer/tester. Please stop trying to use the devtest to figure out our security measures, Since we will be releasing third party developing with TrulibraryBASH soon. Dont worry, Fellow developer/tinkerer. Lotsa Love, TrulyS1r0"
+    fi
+}
