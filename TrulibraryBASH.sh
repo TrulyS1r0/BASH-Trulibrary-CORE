@@ -3,7 +3,7 @@
 CALLEDBY=$1
 export VERSION=V1.0
 
-start () {
+function start {
     echo "Trulibrary found, And starting. Please wait."
     if (whoami != root)
         then echo "Please run as administrator or ROOT, Or with WSL if you didnt."
@@ -11,7 +11,7 @@ start () {
         else run
 }
 
-run () {
+function run {
     echo "Running Trulibrary with version BASH-"$VERSION
     echo "Running Trulibrary called by "$CALLEDBY
 }
