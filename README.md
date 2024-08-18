@@ -6,8 +6,10 @@ Trulibrary is NOT RESPONSIBLE for any damage done to your computer, By running s
 
 # ERROR CODES
 Code 41: CALLEDBY is blacklisted
+
 Code 42: CALLEDBY is blacklisted (Verified)
 
 # ERROR CODE EXPLANATIONS
 Code 41: The script's CALLEDBY code is blacklisted by the user of Trulibrary, And wont start until removed. A blacklisted CALLEDBY could be because the user knows that a certain CALLEDBY is from a unsafe script.
+
 Code 42: The script's CALLEDBY code is blacklisted by the owner/admins of Trulibrary, And wont start until removed, Which isnt a good idea. A blacklisted CALLEDBY could be because we know that a certain CALLEDBY is from a unsafe script.
