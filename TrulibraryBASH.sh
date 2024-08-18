@@ -3,6 +3,17 @@ KEY=$3
 TOKEN=$2
 CALLEDBY=$1
 VERSION="V1.0"
+# Use the blacklist below if there's any script CALLEDBY's that are bad for your computer, That im not aware of. For example "virus"
+# To add to blacklist, Type the code in the "" and if you need to add multiple, Add a space and another "" with the next blacklisted CALLEDBY.
+BLACKLIST=(" ")
+# DO NOT TOUCH VERIFIEDBLACKLIST
+VERIFIEDBLACKLIST=("devtestscript")
+if [[ $(echo ${BLACKLIST[@]} | fgrep -w $CALLEDBY) ]]
+    then echo "Exiting with code 41. Go to the GitHub page for documentation."; exit 41
+fi
+if [[ $(echo ${VERIFIEDBLACKLIST[@]} | fgrep -w $CALLEDBY) ]]
+    then echo "Exiting with code 42. Go to the GitHub page for documentation."; exit 42
+fi
 function start {
     echo "Trulibrary found, And starting. Please wait."
     if [[ "$(whoami)" != "root" ]];
